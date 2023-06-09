@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "196250959619",
+    "project_id": "practo-doctor-test",
+    "storage_bucket": "practo-doctor-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196250959619:android:f418fc034a84206bba3336",
+        "android_client_info": {
+          "package_name": "com.example.practo_doctor_test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP8z5ISelYPWmtoH8p8tGqrzA9v9mx5Ug"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
