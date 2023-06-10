@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
 
@@ -16,8 +17,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
         backgroundColor: Colors.white,
         elevation: 0.0,
         leading: IconButton(
-            onPressed: (){},
-            icon: const Icon(Icons.arrow_back_ios,color: Colors.black,)),
+            onPressed: () {},
+            icon: const Icon(
+              Icons.arrow_back_ios,
+              color: Colors.black,
+            )),
       ),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
