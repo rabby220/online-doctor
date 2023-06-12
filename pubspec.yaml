@@ -39,8 +39,8 @@ dependencies:
   go_router: ^8.0.1
   flutter_login: ^4.1.1
   firebase_auth: ^4.6.2
-  flutter_zoom_drawer: ^3.0.4+1
   get: ^4.6.5
+  salomon_bottom_bar: ^3.3.2
 
 dev_dependencies:
   flutter_test:
@@ -66,7 +66,14 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - assets/img/
+    - assets/img/
+    - assets/img/dermatologist.png
+    - assets/icons/more.png
+    - assets/icons/lab.png
+    - assets/icons/medicine.png
+    - assets/icons/doctor.png
+    - assets/icons/
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

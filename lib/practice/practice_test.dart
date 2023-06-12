@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:get/get.dart';
-
 
 class PracticeScreen extends StatefulWidget {
   const PracticeScreen({super.key});
@@ -13,11 +11,21 @@ class PracticeScreen extends StatefulWidget {
 class _PracticeScreenState extends State<PracticeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ZoomDrawer(
-          menuScreen: menuScreen,
-          mainScreen: mainScreen
-      )
+    return SafeArea(
+      child: Scaffold(
+        body: Center(
+            child: Image.asset("assets/img/dermatologist.png")
+        ),
+      ),
     );
   }
 }
+
+
+
+
+
+/*
+body: Center(
+child: Text("I am Practice Screen"),
+),*/

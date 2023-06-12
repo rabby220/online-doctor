@@ -3,11 +3,12 @@ import 'package:go_router/go_router.dart';
 
 import '../auth/login.dart';
 import '../auth/signup.dart';
-import '../drawer/find_doctor/find_doctor.dart';
-import '../drawer/lab_test/lab_test.dart';
-import '../drawer/medicine/medine.dart';
-import '../drawer/surgeries/surgeries.dart';
-import '../drawer/video_consult/video_consult.dart';
+
+import '../drawer/diagnostic/diagnostic.dart';
+import '../drawer/doctor_bar/doctor_bar.dart';
+import '../drawer/home_bar/home_bar.dart';
+import '../drawer/medine_bar/medine_bar.dart';
+import '../drawer/more_bar/more_bar.dart';
 import '../home.dart';
 import '../practice/practice_test.dart';
 import 'const_routes.dart';
@@ -16,8 +17,8 @@ import 'error.dart';
 class AppRouter {
   static final _rootNavigatorKey = GlobalKey<NavigatorState>();
   static final GoRouter router = GoRouter(
-    initialLocation: '/practice_screen',
-   //debugLogDiagnostics: true,
+    initialLocation: '/home',
+    //debugLogDiagnostics: true,
     navigatorKey: _rootNavigatorKey,
 
     routes: [
@@ -39,51 +40,42 @@ class AppRouter {
           pageBuilder: (context, state) {
             return const MaterialPage(child: SignUpScreen());
           }),
-
       GoRoute(
-          name: MyAppRouterConstants.findDoctorRouterName,
-          path: '/find_doctor',
+          name: MyAppRouterConstants.homeBarScreenRoutes,
+          path: '/home_bar',
           pageBuilder: (context, state) {
-            return const MaterialPage(child: FindDoctorScreen());
+            return const MaterialPage(child: HomeBarScreen());
           }),
-
       GoRoute(
-          name: MyAppRouterConstants.videoConsultRouterName,
-          path: '/video_consult',
+          name: MyAppRouterConstants.medicineBarScreenRoutes,
+          path: '/medicine_bar',
           pageBuilder: (context, state) {
-            return const MaterialPage(child: VideoConsultScreen());
+            return const MaterialPage(child: MedicineBarScreen());
           }),
-
-
       GoRoute(
-          name: MyAppRouterConstants.medicineRouterName,
-          path: '/medicine',
+          name: MyAppRouterConstants.doctorBarScreenRoutes,
+          path: '/doctor_bar',
           pageBuilder: (context, state) {
-            return const MaterialPage(child: MedicineScreen());
+            return const MaterialPage(child: DoctorBarScreen());
           }),
-
       GoRoute(
-          name: MyAppRouterConstants.labTestRouterName,
-          path: '/lab-test',
+          name: MyAppRouterConstants.diagnosticBarScreenRoutes,
+          path: '/diagnostic-bar',
           pageBuilder: (context, state) {
-            return const MaterialPage(child: LabTestScreen());
+            return const MaterialPage(child: DiagnosticBarScreen());
           }),
-
       GoRoute(
-          name: MyAppRouterConstants.surgeryRouterName,
-          path: '/surgery',
+          name: MyAppRouterConstants.moreBarScreenRoutes,
+          path: '/more_bar',
           pageBuilder: (context, state) {
-            return const MaterialPage(child: SurgeriesScreen());
+            return const MaterialPage(child: MoreBarScreen());
           }),
-
       GoRoute(
           name: MyAppRouterConstants.practiceRouterName,
           path: '/practice_screen',
           pageBuilder: (context, state) {
             return const MaterialPage(child: PracticeScreen());
           }),
-
-
     ],
     errorPageBuilder: (context, state) {
       return const MaterialPage(child: NotFoundScreen());
